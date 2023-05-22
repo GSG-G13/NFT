@@ -1,9 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Index from './routes/landingPage/Index'
-import Signup from './routes/Signup/sign'
-import Login from './routes/Login/index'
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Index from "./routes/landingPage/Index";
+import Signup from "./routes/Signup/sign";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 const router = createBrowserRouter([
@@ -12,16 +10,6 @@ const router = createBrowserRouter([
     element: <Index />,
   },
   {
-    path: '/signup',
-    element: <Signup />
-
-  },
-  {
-    path: '/login',
-    element: <Login />
-
-  }
-])
     path: "/signup",
     element: <Signup />,
   },
