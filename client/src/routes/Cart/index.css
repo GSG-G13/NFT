@@ -1,53 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap");
+/* font-family: 'Baloo 2', cursive; */
+
 .cart-page {
-    background-color: #1f293a;
-    min-height: 100vh;
+  background: radial-gradient(#031065, black);
+  min-height: 100vh;
+  font-family: 'Baloo 2', cursive;
 }
 .cart-main {
-    margin-top: 50px;
-    color: #fff;
+  color: #fff;
+  width: 47%;
+  margin: 4rem auto 0;
+  padding: 1rem;
+  background: #96969629;
+  backdrop-filter: blur(111px);
+  border-radius: 29px;
 }
 .cart-main .cart-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 20px;
-    text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  text-align: center;
 }
 .cart-main .cart-content > * {
-    font-weight: bold;
-    font-size: 18px;
-    flex: 1;
+  font-weight: bold;
+  font-size: 18px;
+  flex: 1;
 }
 
 .cart-main .cart-head {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    padding: 10px 20px 5px;
-    text-transform: capitalize;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 10px 20px 5px;
+  text-transform: capitalize;
+  background: #5278b0;
 }
-.cart-main .cart-content,
-.cart-main .cart-head {
-    background-color: #001436;
-}
+
 .cart-main .cart-content:last-of-type {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    margin-bottom: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-bottom: 15px;
 }
 
 .cart-main .cart-content .product-img img {
-    width: 50%;
-    height: 50%;
-    border-radius: 6px;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  margin-top: 15px;
 }
 
 .cart-main button {
-    background-color: #dc143c;
-    padding: 6px 20px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    font-size: 17px;
-    font-weight: bold;
+  background-color: #dc143c;
+  padding: 6px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
 }

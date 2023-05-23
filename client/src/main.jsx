@@ -6,7 +6,7 @@ import Sign from "./routes/Signup/sign";
 import Login from "./routes/Login/index";
 import Products from "./routes/production/Products";
 import CartProduct from "./routes/Cart";
-import Cart from "./routes/Carts/Cart";
+import Cart from "./components/Cart";
 import Index from "./routes/landingPage/Index";
 
 const router = createBrowserRouter([
