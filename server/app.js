@@ -17,8 +17,7 @@ app.disable('x-powered-by');
 
 app.use('/api', userRouter);
 app.use('/api', productRouter);
-app.use(checkAuth)
+app.use(checkAuth);
 app.use('/api', cartRouter);
-
 
 module.exports = app;
