@@ -7,7 +7,7 @@ const userRouter = Router();
 
 userRouter.post('/signup', signup);
 userRouter.post('/login', login);
-userRouter.use('/logout', logout);
+userRouter.get('/logout', logout);
 userRouter.use(checkAuth);
 userRouter.get('/main', products);
 
