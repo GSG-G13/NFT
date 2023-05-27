@@ -1,7 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import "./signup.css";
-
+import { Link } from 'react-router-dom'
+import Nav from '../../components/Nav'
 const Signup = () => {
   const initialState = {
     username: "",
@@ -33,6 +34,8 @@ const Signup = () => {
   };
 
   return (
+    <>
+    <Nav type='signup' />
     <div className="container auth">
       <div className="auth-box">
         <h2>SignUp</h2>
@@ -76,9 +79,11 @@ const Signup = () => {
           </div>
           <button className="btn">Sign Up</button>
         </form>
+          <p className="haveAcount">I have an account <Link to='/login'>Log-in</Link></p>
         <p style={{ color: "red", textAlign: "center" }}>{error}</p>
       </div>
     </div>
+  </>
   );
 };
 export default Signup;

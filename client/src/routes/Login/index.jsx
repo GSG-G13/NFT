@@ -1,5 +1,7 @@
 import { useState } from "react"
 import axios from "axios";
+import { Link } from "react-router-dom";
+import Nav from "../../components/Nav";
 
 const Login = () => {
     const initialState = {
@@ -31,6 +33,8 @@ const Login = () => {
     }
 
     return (
+        <>
+        <Nav type='login'/>
         <div className="container auth">
             <div className="auth-box">
                 <h2>LogIn</h2>
@@ -53,9 +57,11 @@ const Login = () => {
                     </div>
                     <button className="btn">Log In</button>
                 </form>
+                <p className="haveAcount">I dont have an account <Link to='/Signup'>Sign-up</Link></p>
                 <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>
             </div>
         </div>
+        </>
     )
 }
 export default Login

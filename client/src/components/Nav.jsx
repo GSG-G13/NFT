@@ -16,7 +16,8 @@ const Nav = ({ type }) => {
             </div>
         :
         <></>}
-        {type === "mainPage" ? (
+        
+        {type === "mainPage" || type === "signup" || type === "login" ? (
           <div className="sign">
             <Link to="/login" className="button">
               <span></span>
