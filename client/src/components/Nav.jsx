@@ -10,13 +10,6 @@ const Nav = ({ type }) => {
           <nft>F</nft>
           <nft>T</nft>
         </div>
-        {type !== "mainPage" ?
-           <div className="logout">
-             <Link to="/" className="btn">Logout</Link>
-            </div>
-        :
-        <></>}
-        
         {type === "mainPage" || type === "signup" || type === "login" ? (
           <div className="sign">
             <Link to="/login" className="button">
@@ -25,15 +18,26 @@ const Nav = ({ type }) => {
               <span></span>
               <span></span> sign in
             </Link>
-            <Link to="/signup" className="btn">
+            <Link to="/signup" className="btn sign-up-page">
               sign up
             </Link>
-            
           </div>
         ) : type === "cart" ? (
-          <Link to="/main" className="fa-solid fa-igloo main"></Link>
+          <>
+            <Link to="/main" className="fa-solid fa-igloo main"></Link>
+            <Link
+              to="/"
+              className="fa-solid fa-arrow-right-from-bracket logout"
+            ></Link>
+          </>
         ) : (
-          <Link to="/cart" className="fa-solid fa-cart-shopping"></Link>
+          <>
+            <Link to="/cart" className="fa-solid fa-cart-shopping"></Link>
+            <Link
+              to="/"
+              className="fa-solid fa-arrow-right-from-bracket logout"
+            ></Link>
+          </>
         )}
       </nav>
     </>

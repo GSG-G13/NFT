@@ -3,19 +3,16 @@ const { verifyToken } = require('../utils/jwt');
 const checkAuth = (req, res, next) => {
   const { token } = req.cookies;
 
-  if (!token) {
-    res.clearCookie('token');
-    return res.status(401).json({ message: 'Unauthenticated!' });
+  if (token) {
+    verifyToken(token).then((myData) => {
+      req.userInfo = myData;
+      next();
+    }).catch(() => {
+      res.clearCookie('token');
+      return res.status(401).json({ message: 'Unauthorized!' });
+    });
   } else {
-    verifyToken(token)
-      .then(decoded => {
-        req.user = decoded;
-        next();
-      })
-      .catch(() => {
-        res.clearCookie('token');
-        return res.status(401).json({ message:'Unauthorized!' });
-      });
+    res.redirect('/');
   }
 };
 

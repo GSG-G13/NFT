@@ -261,7 +261,7 @@ nft::after {
   border-radius: 3px;
 }
 
-.btn::before {
+.btn.sign-up-page::before {
   content: "";
   position: absolute;
   left: 0;
@@ -282,8 +282,14 @@ nft::after {
   align-items: center;
   gap: 0.5rem;
 }
-.logout{
+
+.fa-arrow-right-from-bracket {
   position: absolute;
-  right: 10px;
+  top: 16px;
+  right: 36px;
+  color: #dc143c;
+  text-decoration: none;
+  font-size: xx-large;
 }
+
 /* end handle Nav bar  */
