@@ -6,9 +6,8 @@ const checkAuth = require('../../middleware/checkAuth');
 const userRouter = Router();
 
 userRouter.post('/signup', signup);
-
-userRouter.get('/main', checkAuth, products);
-
 userRouter.post('/login', login);
+userRouter.use(checkAuth);
+userRouter.get('/main', products);
 
 module.exports = userRouter;
