@@ -33,6 +33,10 @@ const Signup = () => {
     }
   };
 
+  const spans = Array.from({ length: 50 }, (_, index) => (
+    <span key={index} style={{ "--i": index }}></span>
+  ));
+
   return (
     <>
       <Nav type="signup" />
@@ -83,6 +87,7 @@ const Signup = () => {
             </div>
             <button className="btn">Sign Up</button>
           </form>
+          <div className="container rotate">{spans}</div>
           <p className="haveAcount">
             I have an account <Link to="/login">Log-in</Link>
           </p>

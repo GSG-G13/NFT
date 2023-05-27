@@ -140,3 +140,37 @@
   color: rgb(212, 48, 100);
 }
 /* Sign up */
+
+.container.rotate {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 243px;
+}
+
+.container.rotate span {
+  position: absolute;
+  left: 0;
+  width: 8px;
+  height: 6px;
+  background: #2c4766;
+  border-radius: 8px;
+  transform-origin: 150px;
+  transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+  animation: animateBlink 3s linear infinite;
+  animation-delay: calc(var(--i) * (3s / 50));
+}
+
+@keyframes animateBlink {
+  0% {
+    background: #9007ff;
+  }
+
+  25% {
+    background: #471d40;
+  }
+}
