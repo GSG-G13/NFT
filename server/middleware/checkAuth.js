@@ -5,7 +5,7 @@ const checkAuth = (req, res, next) => {
 
   if (token) {
     verifyToken(token).then((myData) => {
-      req.userInfo = myData;
+      req.user = myData;
       next();
     }).catch(() => {
       res.clearCookie('token');
