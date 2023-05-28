@@ -1,11 +1,11 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
-const { DEV_DB_URL } = process.env;
+const { PRO_DB_URL } = process.env;
 
 const options = {
-  connectionString: DEV_DB_URL,
-  ssl: false,
+  connectionString: PRO_DB_URL,
+  ssl: true,
 };
 
 const connection = new Pool(options);
