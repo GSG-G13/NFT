@@ -1,7 +1,13 @@
 import "./nav.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Nav = ({ type }) => {
+  const handleLogout = () => {
+    axios.get("/api/logout");
+    window.location.href = "/";
+  };
+
   return (
     <>
       <nav className="Nav">
@@ -25,18 +31,18 @@ const Nav = ({ type }) => {
         ) : type === "cart" ? (
           <>
             <Link to="/main" className="fa-solid fa-igloo main"></Link>
-            <Link
-              to="/"
+            <div
               className="fa-solid fa-arrow-right-from-bracket logout"
-            ></Link>
+              onClick={handleLogout}
+            ></div>
           </>
         ) : (
           <>
             <Link to="/cart" className="fa-solid fa-cart-shopping"></Link>
-            <Link
-              to="/"
+            <div
               className="fa-solid fa-arrow-right-from-bracket logout"
-            ></Link>
+              onClick={handleLogout}
+            ></div>
           </>
         )}
       </nav>

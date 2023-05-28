@@ -290,6 +290,7 @@ nft::after {
   color: #dc143c;
   text-decoration: none;
   font-size: xx-large;
+  cursor: pointer;
 }
 
 /* end handle Nav bar  */
