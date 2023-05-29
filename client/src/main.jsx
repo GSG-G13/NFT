@@ -7,7 +7,7 @@ import Login from "./routes/Login/index";
 import Products from "./routes/production/Products";
 import CartProduct from "./routes/Cart/CartProduct";
 import Index from "./routes/landingPage/Index";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import "@fontawesome/fontawesome-free/css/all.min.css";
 
 const router = createBrowserRouter([
   {
