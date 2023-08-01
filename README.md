@@ -1,5 +1,5 @@
 # NFT
-- [NFT Website]([https://github.com/abeerAyad](https://nft-84so.onrender.com/))
+- [NFT Website](https://nft-84so.onrender.com/)
 ## User-Admin Stories:
 
 - You can sign up and login.
